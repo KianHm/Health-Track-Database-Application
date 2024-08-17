@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Appointments Form</title>
+</head>
+<body>
+    <h1>Appointment Booking</h1>
+    <form action="/api/submit-appointment" method="POST">
+        <input type="text" name="appointment_reason" placeholder="Enter Reason for Appointment" required>
+        <input type="datetime-local" name="appointment_time" placeholder="Select Appointment Time" required>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

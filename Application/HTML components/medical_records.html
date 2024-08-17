@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medical Records Form</title>
+</head>
+<body>
+    <h1>Medical Record Entry</h1>
+    <form action="/api/submit-medical-record" method="POST">
+        <input type="text" name="record_detail" placeholder="Enter Record Details" required>
+        <input type="date" name="record_date" placeholder="Enter Date of Record">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

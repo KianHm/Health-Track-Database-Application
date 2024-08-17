@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctors Form</title>
+</head>
+<body>
+    <h1>Doctor Information</h1>
+    <form action="/api/submit-doctor" method="POST">
+        <input type="text" name="doctor_name" placeholder="Enter Doctor's Name" required>
+        <input type="email" name="email" placeholder="Enter Email" required>
+        <input type="date" name="dob" placeholder="Date of Birth">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

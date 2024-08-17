@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patients Form</title>
+</head>
+<body>
+    <h1>Patient Information</h1>
+    <form action="/api/submit-patient" method="POST">
+        <input type="text" name="patient_name" placeholder="Enter Patient's Name" required>
+        <input type="email" name="email" placeholder="Enter Email" required>
+        <input type="date" name="dob" placeholder="Date of Birth">
+        <input type="number" name="age" placeholder="Enter Patient's Age" required>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
