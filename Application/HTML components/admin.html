@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <h2>Manage Entries</h2>
+    <div>
+        <h3>View Entries</h3>
+        <button onclick="fetchEntries()">Load Entries</button>
+        <ul id="entriesList"></ul>
+    </div>
+
+    <script>
+        // Check if logged in
+        window.onload = function() {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            if(isLoggedIn !== 'true') {
+                window.location.href = 'admin-login.html'; // Redirect to login page if not logged in
+            }
+        };
+
+        function fetchEntries() {
+            fetch('/api/test-connection')
+                .then(response => response.json())
+                .then(data => {
+                    const list = document.getElementById('entriesList');
+                    list.innerHTML = ''; // Clear previous entries
+                    if (data.success) {
+                        const item = document.createElement('li');
+                        item.textContent = data.message;
+                        list.appendChild(item);
+                    } else {
+                        list.innerHTML = 'Failed to load entries: ' + data.message;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading entries:', error);
+                    document.getElementById('entriesList').textContent = 'Error: ' + error;
+                });
+        }
+    </script>
+</body>
+</html>
