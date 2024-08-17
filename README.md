@@ -3,7 +3,7 @@ In our project, "Health Track," we address the significant challenge of fragment
 
 The organization of this report reflects the comprehensive approach we've taken to develop "Health Track." We begin by detailing the problem statement, which outlines the issues with current record-keeping systems and the necessity for our solution. We then introduce our target users, primarily healthcare providers and administrative staff, who require reliable access to detailed patient histories and efficient management tools. Subsequent sections will discuss our system's architecture, including the database schema and the web interfaces for both patients and healthcare professionals. This structure ensures that the report is not only informative but also provides a clear roadmap of our project's development and intended impact.
 
-**System Requirements**
+**System Requirements:**
 Central Database: Stores patient records, medical records, doctor's information, and appointment details.
 Web Interface: Divided into two sections, the Patient Dashboard and Doctor/Staff Portal, allowing interaction with the database for different user roles.
 Security Layer: Ensures secure access and data protection, crucial for a healthcare database.
